@@ -1,0 +1,18 @@
+textarea:focus, input:focus, select:focus {
+    box-shadow: none !important;
+    border-color: darkorange !important;
+    outline: 0 !important;
+    outline-offset: 0px !important;
+} 
+.btn-orange{ 
+    background-color: #fc4a1a;  /* fallback for old browsers */
+	background-color: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+	background-color: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    font-family: 'Caviar dreams';
+    font-weight: bold;
+}
+#orange{
+    color: rgba(255, 140, 0, 1);
+    font-family: 'Merienda';
+}

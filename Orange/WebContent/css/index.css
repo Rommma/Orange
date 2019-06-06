@@ -1,0 +1,153 @@
+#index{
+    background: url(../img/boloChocolate2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#fundohome{
+    background: url(../img/cupcakeChocolate.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container-fluid{
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); 
+    position: absolute;
+}
+#fundohome .container-fluid{
+    height: 91%;
+}
+#caixa{
+    height: 43%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: white;
+    margin-top: 15%;
+    font-family: 'Roboto';
+    text-align: left;
+    text-indent: 5px;
+}
+.campo{
+    margin-top: 5%;
+}
+h1{
+    text-align: center;
+    font-size: 4em;
+    color: rgba(255, 140, 0, 1);
+}
+#btnLogin{
+    margin-top: 5%;
+    float: right;
+    border: 3px solid white;
+    border-radius: 5px;
+    color: white;
+}
+#ass{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    text-align: right;
+    width: 100%;
+    font-family: 'Caviar dreams';
+    color:rgb(198, 198, 198);
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: none !important;
+    border: 1px solid rgb(168, 116, 102) !important;
+    outline: 0 !important;
+    outline-offset: 0px !important;
+} 
+.btn-orange{ 
+    background-color: rgb(252, 74, 26);  /* fallback for old browsers */
+	background-color: -webkit-linear-gradient(to right, rgb(247, 183, 51), rgb(252, 74, 26));  /* Chrome 10-25, Safari 5.1-6 */
+	background-color: linear-gradient(to right, rgb(247, 183, 51), rgb(252, 74, 26)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    font-family: 'Caviar dreams';
+    font-weight: bold;
+    color:white !important;
+}
+#orange{
+    color: rgba(255, 140, 0, 1);
+    font-family: 'Merienda';
+}
+#orange:hover{
+	border:3px solid white !important;
+}
+p{
+   font-family: 'Roboto';  
+}
+.modal-title{
+    font-family: 'Caviar dreams';
+    font-weight: bold;
+}
+#homeinfo{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-family: 'Caviar dreams';
+    font-weight: bold;
+    font-size: 5em;
+    color:white;
+}
+#fecharcaixadiv{
+    font-family: 'Caviar dreams';
+}
+.bg-light {
+   /* background-color: #131313 !important;*/
+}
+.itemmenu{
+    background: none;
+    border: none ;
+    font-size: 1.15em ;
+    text-align: center;
+    cursor: pointer;
+    color:rgb(153, 153, 153) !important;
+    font-weight: bolder;
+    font-family: 'Caviar dreams';
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+.itemmenu:hover{
+    color: rgb(165, 103, 67) !important;
+}
+#btnsair{
+    font-weight: bolder;
+    font-family: 'Caviar dreams';
+    color:rgb(211, 211, 211) !important;
+}
+#btnsair:hover{
+    text-decoration: none;
+    color:rgb(91, 89, 89) !important;
+}
+label{
+    font-family: 'Caviar dreams';
+    font-weight: bold;
+}
+.btn-semfundo{
+    background: none;
+    border:none;
+    font-family: 'Caviar dreams';
+    font-weight: bold;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.btn-semfundo img{
+    border-radius:100px;
+    border:1px solid rgb(211, 211, 211);
+    margin-right: 10px;
+}
+.naoredonda img{
+    border-radius: 0px;
+    border:none;
+}
+h1{
+   /* color:black;*/
+    font-family: 'Caviar dreams';
+    font-weight: bold;
+    font-size: 3em;
+}
+.modal-footer p{
+    margin-right: 70% !important;
+}
+#pagamento{
+    font-family: 'Caviar dreams';
+    font-weight: bold;
+}
