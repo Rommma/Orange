@@ -2,6 +2,5 @@ INDEX VERSION 1.4+C:\Users\franc\Documents\Projetos\Orange\.metadata\.plugins\or
 941302017.index
 685859526.index
 1777956267.index
-3534899536.index
 1902819167.index
 4196110712.index

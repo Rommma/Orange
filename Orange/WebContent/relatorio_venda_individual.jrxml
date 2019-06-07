@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_venda_individual" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="986b0a07-4691-4bd0-bf24-00401a327bbd">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Postgres"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Table_TH" mode="Opaque" backcolor="rgba(255, 255, 255, 0.0)">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FF9A5B">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="rgba(255, 255, 255, 0.0)">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#FF9A5B">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="Compras" uuid="04f59fc0-c90d-4e70-a2ad-09cca3c2df95">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Postgres"/>
+		<parameter name="idcompra" class="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[select * from tb_itemvenda where venda =  $P{idcompra}]]>
+		</queryString>
+		<field name="produtoid" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="produtoid"/>
+		</field>
+		<field name="produtonome" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="produtonome"/>
+		</field>
+		<field name="quantidade" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="quantidade"/>
+		</field>
+		<field name="subtotal" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.label" value="subtotal"/>
+		</field>
+		<field name="venda" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="venda"/>
+		</field>
+		<field name="id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+		</field>
+	</subDataset>
+	<subDataset name="Pagamentos" uuid="f271d8b9-26bd-4df9-9193-c7e7ac2d8d4b">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Postgres"/>
+		<parameter name="idvenda" class="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[select * from tb_pagamento where venda= $P{idvenda}]]>
+		</queryString>
+		<field name="id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+		</field>
+		<field name="nome" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		</field>
+		<field name="valor" class="java.lang.Double">
+			<property name="com.jaspersoft.studio.field.label" value="valor"/>
+		</field>
+		<field name="venda" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="venda"/>
+		</field>
+	</subDataset>
+	<parameter name="id" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tb_venda where id= $P{id}]]>
+	</queryString>
+	<field name="cliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cliente"/>
+	</field>
+	<field name="vendedor" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="vendedor"/>
+	</field>
+	<field name="desconto" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="desconto"/>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+	</field>
+	<field name="troco" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="troco"/>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+	</field>
+	<field name="data" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="data"/>
+	</field>
+	<field name="hora" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="hora"/>
+	</field>
+	<group name="cliente">
+		<groupExpression><![CDATA[$F{cliente}]]></groupExpression>
+	</group>
+	<group name="vendedor">
+		<groupExpression><![CDATA[$F{vendedor}]]></groupExpression>
+	</group>
+	<group name="desconto">
+		<groupExpression><![CDATA[$F{desconto}]]></groupExpression>
+	</group>
+	<group name="total">
+		<groupExpression><![CDATA[$F{total}]]></groupExpression>
+	</group>
+	<group name="troco">
+		<groupExpression><![CDATA[$F{troco}]]></groupExpression>
+	</group>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="552" height="86" forecolor="#5C4314" uuid="78347358-1a89-4a6d-b687-b2136e5deb5f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Venda]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="62" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="455" y="1" width="100" height="30" uuid="e890813c-ae92-42fb-ab3b-419751918d46"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="455" y="31" width="100" height="30" uuid="8eb02794-7213-4f59-a36d-cfb9858ddf74"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="500" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="410" width="555" height="90" uuid="bde38f39-712f-4fd6-a282-99123f0c44f2">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Compras" uuid="c389ae5c-fe9e-4cb6-af1e-f2c618cc2df6">
+						<datasetParameter name="idcompra">
+							<datasetParameterExpression><![CDATA[$F{id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="220" uuid="449d2eb7-1439-4d55-b7ef-5b7a43069b5c">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="220" height="30" uuid="21ef5e49-6701-44be-b677-79d1b38f65a9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Produto]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="20" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="40">
+							<textField>
+								<reportElement x="0" y="0" width="220" height="40" uuid="a7f278ee-f6e4-4f9d-8237-1968d76d5292"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{produtonome}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="160" uuid="d2d0913e-450b-4096-904b-10f3a01e05bb">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="160" height="30" uuid="3bf060cb-14a0-4138-a81b-98a4f1b227af"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Quantidade]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="20" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="40">
+							<textField>
+								<reportElement x="0" y="0" width="160" height="40" uuid="c5d96e99-e7f5-469e-9c59-fab14fd55bfd"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="180" uuid="18143e1d-51ca-4e59-b67e-e8bfdae46ea0">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="180" height="30" uuid="baac1cce-b787-41f3-b599-bdc86add020b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Subtotal]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="20" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="40">
+							<textField pattern="R$ #, ## 0.00">
+								<reportElement x="0" y="0" width="180" height="40" uuid="991a4fab-e6df-4e68-8bfc-d459cca487f8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{subtotal}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="1" y="380" width="555" height="30" forecolor="#5C4314" uuid="83adf841-2f16-48f0-a14f-0bbae87efa8a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Itens da venda]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="100" width="129" height="30" uuid="fe0d7853-c2cf-42b5-adab-011bbe483504">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a75d03c-6c44-44a7-bc8c-66766aa6881f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+			<textField pattern="R$ #, ## 0.00">
+				<reportElement x="350" y="100" width="59" height="30" uuid="f8a4a532-9707-464e-aedd-2ff8955e3916">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af124ece-8c9d-4a8f-8fc6-8a5e03b7ec55"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desconto}]]></textFieldExpression>
+			</textField>
+			<textField pattern="R$ #, ## 0.00">
+				<reportElement x="423" y="100" width="46" height="30" uuid="5c2346f1-0b1b-4448-9005-a37fa75e1e49">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3b66f259-4a96-44da-8925-9297e38b74d2"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{troco}]]></textFieldExpression>
+			</textField>
+			<textField pattern="R$ #, ## 0.00">
+				<reportElement x="483" y="100" width="62" height="30" uuid="420d39bd-a7a5-4058-a26d-d4cde8834359">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="07d13cd1-5551-42b3-88a6-8d9aa1f10b51"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="100" width="100" height="30" uuid="a815755a-5b20-4b0f-b2e5-f758c2b6ebcb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="326da401-77b2-4524-b602-393ab54b187d"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vendedor}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="133" y="170" width="290" height="119" uuid="b216ad97-77cc-4225-8e83-76141b83bbe6">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Pagamentos" uuid="2b478ffa-8487-4367-89a3-2024b9e310ce">
+						<datasetParameter name="idvenda">
+							<datasetParameterExpression><![CDATA[$F{id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="140" uuid="37127ccf-dd9f-406b-9383-a5f5e1fcabeb">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="140" height="30" uuid="ec46c419-9e6d-4641-94bd-f3e8652c5eac"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Nome]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table 1_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="140" height="30" uuid="1ed938b6-a44a-49c6-803d-3812ad83471d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="150" uuid="f9b310fd-a69f-4181-82d5-b02584e77614">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="150" height="30" uuid="5b00ac45-f22c-4e8a-b1d6-b53db42daeb8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Valor]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table 1_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField pattern="R$ #, ## 0.00">
+								<reportElement x="0" y="0" width="150" height="30" uuid="d751c08b-b0df-4eaa-938e-6e892da62cb1"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement mode="Opaque" x="-1" y="45" width="555" height="40" backcolor="#FF9A5B" uuid="ceaccf3d-ebd6-41b1-aa5b-89b0fd664e72"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="50" width="100" height="30" uuid="49cc5c55-fee2-4ae3-92de-2a121b7c61c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vendedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="50" width="129" height="30" uuid="51276780-9b9e-4f44-a8ac-024055752a35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="50" width="59" height="30" uuid="80c67627-121a-4d60-9f2e-421f437ba796"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desconto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="50" width="46" height="30" uuid="f9641e2d-5066-48e0-96bf-876fecfda6e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Troco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="50" width="65" height="30" uuid="56b868b2-4fd4-4d9f-9851-6ace96421854"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="170" width="555" height="30" forecolor="#5C4314" uuid="d1ed22f9-e0de-4134-9a4b-57f071e1ba48"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pagamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="50" width="79" height="35" uuid="a46fd3d1-482f-4147-8eea-3edda1ab98e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data e hora]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="100" width="79" height="16" uuid="05a09ac2-c666-40d0-a4f5-26aacaeacbd8"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="116" width="79" height="19" uuid="6821c78a-6ffb-436c-a7a1-154231e84e3d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="380" y="3" width="176" height="30" uuid="a7ad9c9c-2c79-4d99-9339-ba05379cd322"/>
+				<textElement textAlignment="Right">
+					<font fontName="Caviar Dreams" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

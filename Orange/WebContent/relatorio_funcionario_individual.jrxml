@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_funcionario_individual" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f32943af-9296-4aad-9f8b-d008f037fae6">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Postgres"/>
+	<parameter name="id" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tb_funcionario where id=$P{id}]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cpf"/>
+	</field>
+	<field name="senha" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="senha"/>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cidade"/>
+	</field>
+	<field name="bairro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bairro"/>
+	</field>
+	<field name="logradouro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="logradouro"/>
+	</field>
+	<field name="complemento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="complemento"/>
+	</field>
+	<field name="acesso" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="acesso"/>
+	</field>
+	<field name="img" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="img"/>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+	</field>
+	<field name="datanascimento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="datanascimento"/>
+	</field>
+	<field name="cep" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cep"/>
+	</field>
+	<group name="nome">
+		<groupExpression><![CDATA[$F{nome}]]></groupExpression>
+	</group>
+	<group name="cpf">
+		<groupExpression><![CDATA[$F{cpf}]]></groupExpression>
+	</group>
+	<group name="senha">
+		<groupExpression><![CDATA[$F{senha}]]></groupExpression>
+	</group>
+	<group name="estado">
+		<groupExpression><![CDATA[$F{estado}]]></groupExpression>
+	</group>
+	<group name="cidade">
+		<groupExpression><![CDATA[$F{cidade}]]></groupExpression>
+	</group>
+	<group name="bairro">
+		<groupExpression><![CDATA[$F{bairro}]]></groupExpression>
+	</group>
+	<group name="logradouro">
+		<groupExpression><![CDATA[$F{logradouro}]]></groupExpression>
+	</group>
+	<group name="complemento">
+		<groupExpression><![CDATA[$F{complemento}]]></groupExpression>
+	</group>
+	<group name="acesso">
+		<groupExpression><![CDATA[$F{acesso}]]></groupExpression>
+	</group>
+	<group name="img">
+		<groupExpression><![CDATA[$F{img}]]></groupExpression>
+	</group>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="datanascimento">
+		<groupExpression><![CDATA[$F{datanascimento}]]></groupExpression>
+	</group>
+	<group name="cep">
+		<groupExpression><![CDATA[$F{cep}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="86" forecolor="#5C4314" uuid="79e25375-d4b2-4703-8a81-8bb1109838ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de funcionário]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="700" y="0" width="100" height="30" uuid="56a15b4c-8ae0-4670-a266-9eb6991f7fbe"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="701" y="29" width="100" height="30" uuid="4b269713-0e98-42a9-ab20-7689c2736bae"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="6" splitType="Stretch">
+			<staticText>
+				<reportElement x="401" y="0" width="100" height="6" uuid="7d27add0-0abd-4987-a7b8-ca8d01914127">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6b2a02b4-8a51-43e8-a78c-781bcda7f912"/>
+				</reportElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="0" width="100" height="6" uuid="e6536737-1244-4dab-86df-505f7fdf0a03">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5c8204a5-b907-47c8-b7f9-f5e8362dc615"/>
+				</reportElement>
+				<text><![CDATA[cpf]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="0" width="100" height="6" uuid="8c5a2e34-d437-4546-831e-c07eb134d052">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="337d6e3e-4dae-4e08-b7ef-bf3ee120c341"/>
+				</reportElement>
+				<text><![CDATA[datanascimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="100" height="6" uuid="f99f5168-cc43-48cc-9108-4fe0af41ac70">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1d719aab-e6a4-4f7c-b8e7-fe7d81b314f2"/>
+				</reportElement>
+				<text><![CDATA[logradouro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="0" width="100" height="6" uuid="ac406276-643d-4f67-9026-464435c23dc9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="96871f79-f9a9-46fe-883d-3100f54da9b7"/>
+				</reportElement>
+				<text><![CDATA[cep]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="0" width="100" height="6" uuid="da747b7f-4656-43d8-8f23-0ebdb8165c12">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4d56ca0c-1b67-4956-b68c-ebb50de86d86"/>
+				</reportElement>
+				<text><![CDATA[bairro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="681" y="0" width="100" height="6" uuid="ec066342-1033-47fc-884d-1e4132425f22">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f73d290-f878-4164-8b30-dedc6601765f"/>
+				</reportElement>
+				<text><![CDATA[estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="757" y="0" width="100" height="6" uuid="fe7e16e3-d4e7-4a1e-9fe0-d458d2e9611d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2e8bd5ab-f188-4961-92ad-dda57b678a0b"/>
+				</reportElement>
+				<text><![CDATA[complemento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="661" y="0" width="100" height="6" uuid="b6fc8ea1-eb7e-4382-bd0c-b3a55c9e9038">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="40f7483b-ee03-4920-a52f-76b69b3e5384"/>
+				</reportElement>
+				<text><![CDATA[cidade]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="218" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="60" width="800" height="40" backcolor="#FF9A5B" uuid="c4d9df2a-44c3-469a-aee5-e4fb3dba3838"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="70" width="120" height="30" uuid="c01badd2-8bc5-4951-8404-fc88bfc5494c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="60" width="79" height="39" uuid="ef92cf8e-f196-41b7-a409-af8c6e654dab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data de nascimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="70" width="139" height="30" uuid="534e52d9-088f-400b-9d2c-bc04099202e6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Logradouro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="70" width="111" height="30" uuid="455be119-7ca2-4246-b0bf-e73250077a61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CEP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="501" y="70" width="100" height="30" uuid="17b7d278-335e-454b-b19b-765d7502ed87"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bairro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="690" y="70" width="31" height="30" uuid="2df1bfce-dcff-4992-ba8d-8142fa6dfec6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="730" y="70" width="60" height="30" uuid="7a18f38c-9085-4ab0-b5fe-23643a537f82"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Complemento]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="10" width="770" height="30" uuid="07e90451-16d3-4700-bf44-2032bcd0aebd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6b2a02b4-8a51-43e8-a78c-781bcda7f912"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="120" width="120" height="30" uuid="e2240b10-8c12-4d71-8f32-c5aee4243ac6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5c8204a5-b907-47c8-b7f9-f5e8362dc615"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="120" width="76" height="30" uuid="59ad5c2c-f22a-4bcb-bd06-f0513b8e965a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="337d6e3e-4dae-4e08-b7ef-bf3ee120c341"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datanascimento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="120" width="138" height="30" uuid="415bec2c-3b99-498d-95af-92981598c23c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1d719aab-e6a4-4f7c-b8e7-fe7d81b314f2"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{logradouro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="120" width="111" height="30" uuid="01b95f0d-2d0a-44fb-a6e1-2d6ee924e7be">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="96871f79-f9a9-46fe-883d-3100f54da9b7"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cep}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="120" width="99" height="30" uuid="d4f149bb-873d-47c8-83dd-0e947723bb26">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4d56ca0c-1b67-4956-b68c-ebb50de86d86"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bairro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="690" y="120" width="31" height="30" uuid="2686de22-eab0-47be-a7d5-ec8ecf318c5b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f73d290-f878-4164-8b30-dedc6601765f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="730" y="120" width="62" height="30" uuid="c179e9a7-9866-434a-9b2f-756fd1ff3085">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2e8bd5ab-f188-4961-92ad-dda57b678a0b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{complemento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="610" y="70" width="71" height="30" uuid="c3af717b-0047-4119-a6bc-1c3f2d2ae79a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cidade]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="610" y="120" width="71" height="30" uuid="5533d69c-b4a3-4c87-ac7f-4f09a09d2b7a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="40f7483b-ee03-4920-a52f-76b69b3e5384"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cidade}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="10" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="630" y="21" width="176" height="30" uuid="b01488a6-a852-4b20-a966-7b6b19dcc099"/>
+				<textElement textAlignment="Right">
+					<font fontName="Caviar Dreams" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

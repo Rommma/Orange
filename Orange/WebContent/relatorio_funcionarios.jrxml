@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_funcionarios" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2f53fe05-ce4b-40ad-85e8-73ef21a01dd1">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Postgres"/>
+	<style name="Table_TH" mode="Opaque" backcolor="rgba(255, 255, 255, 0.0)">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FF9A5B">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="43751582-2617-47ca-a89a-d0f5f1781f29">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Postgres"/>
+		<queryString language="SQL">
+			<![CDATA[select * from tb_funcionario]]>
+		</queryString>
+		<field name="nome" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		</field>
+		<field name="cpf" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="cpf"/>
+		</field>
+		<field name="senha" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="senha"/>
+		</field>
+		<field name="estado" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="estado"/>
+		</field>
+		<field name="cidade" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="cidade"/>
+		</field>
+		<field name="bairro" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="bairro"/>
+		</field>
+		<field name="logradouro" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="logradouro"/>
+		</field>
+		<field name="complemento" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="complemento"/>
+		</field>
+		<field name="acesso" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="acesso"/>
+		</field>
+		<field name="img" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="img"/>
+		</field>
+		<field name="id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+		</field>
+		<field name="datanascimento" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="datanascimento"/>
+		</field>
+		<field name="cep" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="cep"/>
+		</field>
+		<group name="nome">
+			<groupExpression><![CDATA[$F{nome}]]></groupExpression>
+		</group>
+		<group name="cpf">
+			<groupExpression><![CDATA[$F{cpf}]]></groupExpression>
+		</group>
+		<group name="senha">
+			<groupExpression><![CDATA[$F{senha}]]></groupExpression>
+		</group>
+		<group name="estado">
+			<groupExpression><![CDATA[$F{estado}]]></groupExpression>
+		</group>
+		<group name="cidade">
+			<groupExpression><![CDATA[$F{cidade}]]></groupExpression>
+		</group>
+		<group name="bairro">
+			<groupExpression><![CDATA[$F{bairro}]]></groupExpression>
+		</group>
+		<group name="logradouro">
+			<groupExpression><![CDATA[$F{logradouro}]]></groupExpression>
+		</group>
+		<group name="complemento">
+			<groupExpression><![CDATA[$F{complemento}]]></groupExpression>
+		</group>
+		<group name="acesso">
+			<groupExpression><![CDATA[$F{acesso}]]></groupExpression>
+		</group>
+		<group name="img">
+			<groupExpression><![CDATA[$F{img}]]></groupExpression>
+		</group>
+		<group name="id">
+			<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		</group>
+		<group name="datanascimento">
+			<groupExpression><![CDATA[$F{datanascimento}]]></groupExpression>
+		</group>
+		<group name="cep">
+			<groupExpression><![CDATA[$F{cep}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select * from tb_funcionario]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cpf"/>
+	</field>
+	<field name="senha" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="senha"/>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cidade"/>
+	</field>
+	<field name="bairro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bairro"/>
+	</field>
+	<field name="logradouro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="logradouro"/>
+	</field>
+	<field name="complemento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="complemento"/>
+	</field>
+	<field name="acesso" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="acesso"/>
+	</field>
+	<field name="img" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="img"/>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+	</field>
+	<field name="datanascimento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="datanascimento"/>
+	</field>
+	<field name="cep" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cep"/>
+	</field>
+	<group name="nome">
+		<groupExpression><![CDATA[$F{nome}]]></groupExpression>
+	</group>
+	<group name="cpf">
+		<groupExpression><![CDATA[$F{cpf}]]></groupExpression>
+	</group>
+	<group name="senha">
+		<groupExpression><![CDATA[$F{senha}]]></groupExpression>
+	</group>
+	<group name="estado">
+		<groupExpression><![CDATA[$F{estado}]]></groupExpression>
+	</group>
+	<group name="cidade">
+		<groupExpression><![CDATA[$F{cidade}]]></groupExpression>
+	</group>
+	<group name="bairro">
+		<groupExpression><![CDATA[$F{bairro}]]></groupExpression>
+	</group>
+	<group name="logradouro">
+		<groupExpression><![CDATA[$F{logradouro}]]></groupExpression>
+	</group>
+	<group name="complemento">
+		<groupExpression><![CDATA[$F{complemento}]]></groupExpression>
+	</group>
+	<group name="acesso">
+		<groupExpression><![CDATA[$F{acesso}]]></groupExpression>
+	</group>
+	<group name="img">
+		<groupExpression><![CDATA[$F{img}]]></groupExpression>
+	</group>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="datanascimento">
+		<groupExpression><![CDATA[$F{datanascimento}]]></groupExpression>
+	</group>
+	<group name="cep">
+		<groupExpression><![CDATA[$F{cep}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="86" forecolor="#5C4314" uuid="5c13f0e5-daf1-4145-a5e4-9c0bc4eb93fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de funcionários]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="67" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="699" y="5" width="100" height="30" uuid="f31d69fa-80ca-4941-bdce-92ca348914ac"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="700" y="34" width="100" height="30" uuid="51ac1dd9-e282-4bf0-97b6-b4bef8ba20a3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Caviar Dreams" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="9" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="274" splitType="Stretch">
+			<componentElement>
+				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="800" height="270" isRemoveLineWhenBlank="true" uuid="3e2511f1-d728-4b77-a91d-d43012036040">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="7a51d2e3-9be8-46f8-bd50-74e4e93aaa24">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="170" uuid="76cad51f-ec86-4f5c-be11-10a1323b6c8c">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="170" height="30" uuid="509eb819-95ad-4d71-adc9-30775714e9f8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[nome]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="170" height="30" uuid="305f04c5-4bcc-4328-a843-2a2b2a008767"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="237c42df-50e1-4887-9bc9-d27ebd830f55">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="5ed460f3-ec38-47b2-95c6-271c7a482424"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[cpf]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="09af7da3-ec62-4a15-a41c-a577b58da4d7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="150" uuid="eabc8e75-06bc-4993-806d-5b1d0a22e97b">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="150" height="30" uuid="82d68984-112b-45ef-bcb9-73f421717ebd"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[logradouro]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="150" height="30" uuid="50780c74-0139-4d94-a992-f5afb12e9baa"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{logradouro}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="79" uuid="cc38d049-d7f2-42bd-b777-5b85115b4d86">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="79" height="30" uuid="9e07dc0b-e590-4742-934a-ad8d5f30f888"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[cep]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="79" height="30" uuid="40d25d89-1b68-4465-b339-adf6b3119409"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cep}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="101" uuid="5afd4c00-7ccb-4b9b-a5dd-857235153015">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="101" height="30" uuid="aff211e5-cc27-4b35-b502-438b59668306"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[bairro]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="101" height="30" uuid="c31aa8e0-6f82-4220-9cce-89b1479784b2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bairro}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="fff6a17e-f151-461c-8775-187592330a64">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="b7b4a6a3-5c78-40ac-8b76-c9b529e5caca"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[cidade]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="ba0199ce-2277-435c-95b5-12937c7afe84"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cidade}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="30" uuid="6cd1c314-3eea-4934-b24b-b652648d8756">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="30" height="30" uuid="d7beee4c-7e17-4a25-b59c-039af3473844"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[UF]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="30" height="30" uuid="ee0db6e9-16e6-4514-a9e3-67bffdfaaeaf"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="3d673d55-2a44-4558-bd28-7bb112a16d8f">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" uuid="39dcf233-f479-4f22-99f6-6f9eb491480a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[complemento]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="30" uuid="df0a3119-06cc-4bbc-9880-9e7950b300a4"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{complemento}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="3959f21a-7392-4e54-8783-1d066c5160d3">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="dde20a83-9bb5-4ab7-ab11-fb0a7d7131d3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Data de nascimento]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="6e13998a-0c70-4823-9678-7b0464172610"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Caviar Dreams" size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{datanascimento}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="623" y="24" width="176" height="30" uuid="9c1fad35-bb48-48ef-b4de-cce807ee2ced"/>
+				<textElement textAlignment="Right">
+					<font fontName="Caviar Dreams" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
